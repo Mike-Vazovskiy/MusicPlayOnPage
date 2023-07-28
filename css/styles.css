@@ -13,7 +13,7 @@
     position: relative;
 }
 
-.navbar {
+nav {
     width: 88%;
     display: flex;
     align-items: center;
@@ -27,13 +27,13 @@
     cursor: pointer;
 }
 
-.navbar ul li {
+nav ul li {
     list-style: none;
     display: inline-block;
     margin: 0 15px;
 }
 
-.navbar ul li a {
+nav ul li a {
     text-decoration: none;
     color: #5f5f5f;
     font-size: 15px;
@@ -74,4 +74,79 @@
 #icon {
     width: 80px;
     cursor: pointer;
+}
+
+nav .fa-bars {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .logo {
+        width: 80px;
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    nav .fa-bars {
+        display: block;
+        position: fixed;
+        top: 7%;
+        right: 5%;
+        color: #fff;
+        font-size: 28px;
+    }
+
+    nav {
+        top: 0;
+        z-index: 10;
+        position: fixed;
+        max-height: 50px;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.6);
+        transition: max-height 1s;
+    }
+
+    nav ul {
+        left: 10px;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 10px;
+        text-align: right;
+    }
+    
+    nav ul li a {
+        color: #fff;
+    }
+
+    .hidemenu {
+        max-height: 300px;
+    }
+
+    .content {
+        top: 40%;
+    }
+
+    .left-col h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .right-col {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right-col p {
+        font-size: 16px;
+        margin-right: 0;
+    }
+
+    #icon {
+        width: 65px;
+    }
 }
